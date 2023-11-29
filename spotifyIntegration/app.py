@@ -8,8 +8,9 @@ CLIENT_ID = "7335fe8c6a29494394c314526901fc59"
 CLIENT_SECRET = "cc7ed1f76e35410392b62fd6a01d4e73"
 TOKEN_INFO = "token_info"
 SECRET_KEY = "asdf"
-MEDIUM_TERM = "medium_term"
 SHORT_TERM = "short_term"
+MEDIUM_TERM = "medium_term"
+LONG_TERM = "long_term"
 
 def create_spotify_oauth():
     return SpotifyOAuth(
@@ -18,6 +19,10 @@ def create_spotify_oauth():
         redirect_uri = url_for("redirectPage", _external=True),
         scope = "user-top-read user-library-read"
     )
+
+def get_token():
+    token_info = session.get(TOKEN_INFO, None)
+    return token_info
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
@@ -41,18 +46,18 @@ def redirectPage():
     code = request.args.get('code') # redirectPage?code=TOKEN, returns TOKEN
     token_info = sp_oauth.get_access_token(code)
     session[TOKEN_INFO] = token_info
-    return redirect(url_for("receipt", _external=True))
+    return redirect(url_for("getTracks", _external=True))
 
-def get_token():
-    token_info = session.get(TOKEN_INFO, None)
-    return token_info
-
-@app.route("/receipt")
-def receipt():
+@app.route("/getTracks")
+def getTracks():
     user_token = get_token()
+
     sp = spotipy.Spotify(
         auth = user_token['access_token']
     )
+
+    current_user_name = sp.current_user()['display_name'] 
+
     short_term = sp.current_user_top_tracks(
         limit=10,
         offset=0,
@@ -64,5 +69,10 @@ def receipt():
         offset=0,
         time_range=MEDIUM_TERM
     )
-    name = 'username'
-    return render_template('receipt.html', short_term=short_term, medium_term=medium_term)
+    long_term = sp.current_user_top_tracks(
+        limit=10,
+        offset=0,
+        time_range=LONG_TERM,
+    )
+    
+    return render_template('tracks.html', user_name = current_user_name, short_term=short_term, medium_term=medium_term, long_term=long_term)
