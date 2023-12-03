@@ -4,33 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts/main.js') }}" defer></script>
     <title>welcome</title>
 </head>
 <body onload="showLastMonthTracks()">
-
-    <script>
-       function showLastMonthTracks() {
-            document.getElementById('lastMonth').style.display = 'block';
-            document.getElementById('6months').style.display = 'none';
-            document.getElementById('allTime').style.display = 'none';
-        }
-
-        function showLastSixMonthsTracks() {
-            document.getElementById('lastMonth').style.display = 'none';
-            document.getElementById('6months').style.display = 'block';
-            document.getElementById('allTime').style.display = 'none';
-        }
-
-        function showAllTimeTracks() {
-            document.getElementById('lastMonth').style.display = 'none';
-            document.getElementById('6months').style.display = 'none';
-            document.getElementById('allTime').style.display = 'block';
-        }     
-    </script>
-   
-   
+    
 <center>
     <h1>Spotify Integration</h1>
+
+    <button class ="logout-button" onclick="spotifyLogout()">Logout from Spotify</button>
 
     <h2>Hello, {{ user_name }}</h2>
 

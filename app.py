@@ -3,6 +3,10 @@ from flask import Flask, request, url_for, session, redirect, render_template
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
+import time
+import os
+import requests
+
 #DEFINING CONSTS
 CLIENT_ID = "7335fe8c6a29494394c314526901fc59"
 CLIENT_SECRET = "cc7ed1f76e35410392b62fd6a01d4e73"
@@ -22,7 +26,14 @@ def create_spotify_oauth():
 
 def get_token():
     token_info = session.get(TOKEN_INFO, None)
-    return token_info
+    if not token_info: 
+        raise "exception"
+    now = int(time.time())
+    is_expired = token_info['expires_at'] - now < 60 
+    if (is_expired): 
+        sp_oauth = create_spotify_oauth()
+        token_info = sp_oauth.refresh_access_token(token_info['refresh_token'])
+    return token_info 
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
@@ -74,5 +85,15 @@ def getTracks():
         offset=0,
         time_range=LONG_TERM,
     )
+
+    if os.path.exists(".cache"): 
+        os.remove(".cache")
     
     return render_template('tracks.html', user_name = current_user_name, short_term=short_term, medium_term=medium_term, long_term=long_term)
+
+@app.route("/logout")
+def logout():
+
+    logout = "https://accounts.spotify.com/en/logout"
+
+    return redirect(url_for(logout))
