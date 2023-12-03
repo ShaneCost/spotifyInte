@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>welcome</title>
+</head>
+<body onload="showLastMonthTracks()">
+
+    <script>
+       function showLastMonthTracks() {
+            document.getElementById('lastMonth').style.display = 'block';
+            document.getElementById('6months').style.display = 'none';
+            document.getElementById('allTime').style.display = 'none';
+        }
+
+        function showLastSixMonthsTracks() {
+            document.getElementById('lastMonth').style.display = 'none';
+            document.getElementById('6months').style.display = 'block';
+            document.getElementById('allTime').style.display = 'none';
+        }
+
+        function showAllTimeTracks() {
+            document.getElementById('lastMonth').style.display = 'none';
+            document.getElementById('6months').style.display = 'none';
+            document.getElementById('allTime').style.display = 'block';
+        }     
+    </script>
+   
+   
+<center>
+    <h1>Spotify Integration</h1>
+
+    <h2>Hello, {{ user_name }}</h2>
+
+    
+    <button onclick="showLastMonthTracks()">Last Month's Top Tracks</button>
+    <button onclick="showLastSixMonthsTracks()">Last 6 Months' Top Tracks</button> 
+    <button onclick="showAllTimeTracks()">All Time Top Tracks</button> 
+    
+    <div id="lastMonth">
+    <h3>Last Month Top Tracks:</h3>
+    <div class="container">
+        <ul>
+            {% for track in short_term['items'] %}
+                <div class="item">
+                    <img src="{{ track['album']['images'][1]['url'] }}" alt="Album Art"><br>
+                    {{ track['name'] }} <br> {{ track['artists'][0]['name'] }}
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+
+    <div id="6months">
+    <h3>Last 6 Months Top Tracks:</h3>
+    <div class="container">
+        <ul>
+            {% for track in medium_term['items'] %}
+                <div class="item">
+                    <img src="{{ track['album']['images'][1]['url'] }}" alt="Album Art"><br>
+                    {{ track['name'] }} <br> {{ track['artists'][0]['name'] }}
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+
+    <div id="allTime">
+    <h3>All Time Top Tracks:</h3>
+    <div class="container">
+        <ul>
+            {% for track in long_term['items'] %}
+                <div class="item">
+                    <img src="{{ track['album']['images'][1]['url'] }}" alt="Album Art"><br>
+                    {{ track['name'] }} <br> {{ track['artists'][0]['name'] }}
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>       
+</center>  
+</body>
+</html>
