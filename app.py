@@ -90,10 +90,3 @@ def getTracks():
         os.remove(".cache")
     
     return render_template('tracks.html', user_name = current_user_name, short_term=short_term, medium_term=medium_term, long_term=long_term)
-
-@app.route("/logout")
-def logout():
-
-    logout = "https://accounts.spotify.com/en/logout"
-
-    return redirect(url_for(logout))
