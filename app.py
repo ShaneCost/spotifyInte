@@ -8,8 +8,8 @@ import os
 import requests
 
 #DEFINING CONSTS
-CLIENT_ID = #insert client id
-CLIENT_SECRET = #insert client secret here
+CLIENT_ID = "7335fe8c6a29494394c314526901fc59"
+CLIENT_SECRET = "cc7ed1f76e35410392b62fd6a01d4e73"
 TOKEN_INFO = "token_info"
 SECRET_KEY = "asdf"
 SHORT_TERM = "short_term"
@@ -69,24 +69,42 @@ def getTracks():
 
     current_user_name = sp.current_user()['display_name'] 
 
-    short_term = sp.current_user_top_tracks(
-        limit=10,
+    short_term_track = sp.current_user_top_tracks(
+        limit=1,
         offset=0,
         time_range=SHORT_TERM
     )
 
-    medium_term = sp.current_user_top_tracks(
-        limit=10,
+    medium_term_track = sp.current_user_top_tracks(
+        limit=1,
         offset=0,
         time_range=MEDIUM_TERM
     )
-    long_term = sp.current_user_top_tracks(
-        limit=10,
+    long_term_track = sp.current_user_top_tracks(
+        limit=1,
         offset=0,
         time_range=LONG_TERM,
+    )
+
+    short_term_artist = sp.current_user_top_artists(
+        limit=6,
+        offset=0,
+        time_range=SHORT_TERM
+    )
+
+    medium_term_artist = sp.current_user_top_artists(
+        limit=6,
+        offset=0,
+        time_range=MEDIUM_TERM
+    )
+
+    long_term_artist = sp.current_user_top_artists(
+        limit=6,
+        offset=0,
+        time_range=LONG_TERM
     )
 
     if os.path.exists(".cache"): 
         os.remove(".cache")
     
-    return render_template('tracks.html', user_name = current_user_name, short_term=short_term, medium_term=medium_term, long_term=long_term)
+    return render_template('tracks.html', user_name = current_user_name, short_term_track=short_term_track, medium_term_track=medium_term_track, long_term_track=long_term_track, short_term_artist=short_term_artist, medium_term_artist=medium_term_artist, long_term_artist=long_term_artist)

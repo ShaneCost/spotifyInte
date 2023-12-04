@@ -1,7 +1,7 @@
 
 function showLastMonthTracks() {
      document.getElementById('lastMonth').style.display = 'block';
-     document.getElementById('6months').style.display = 'none';
+     document.getElementById('6months').style.display= 'none';
      document.getElementById('allTime').style.display = 'none';
  }
 
@@ -26,3 +26,14 @@ function showLastMonthTracks() {
          window.location.href = '/'; 
      }, 1000);
  }
+
+ function downloadAsPNG() {
+    const element = document.getElementById('download');
+
+    html2canvas(element).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'content.png';
+        link.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+        link.click();
+    });
+}

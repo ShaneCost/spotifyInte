@@ -1,49 +1,122 @@
-.container{
-    padding:1em 0;
+@font-face {
+    font-family: 'BadGong';
+    src: url('../fonts/BadGong.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TravelingTypewriter';
+    src: url('../fonts/TravelingTypewriter.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Puggos';
+    src: url('../fonts/puggos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    background-color: #a6a482;
+  }
+  
+  .stars-image {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 100px;
+    height: auto;
+  }
+  
+  .letter {
+    background-image: url('../images/paper.jpeg');
+    background-size: cover;
+    padding: 20px;
     border-radius: 10px;
-    display: grid;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-}
-.item {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
-    border: 1px solid black;
-    width: 100px;
-    margin: 1rem;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
- 
-button {
-    flex: 1;
-    background-color: #333;
-    color: #fff;
-    border: 1px solid;
-    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .typewriter,
+  .handwritten-note {
+    font-family: 'TravelingTypewriter', sans-serif;
+    line-height: 1;
+  }
+  
+  .typewriter {
+    font-size: 1em;
+  }
+  
+  .handwritten {
+    font-family: 'BadGong', sans-serif;
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .image-button,
+  .image-button-download {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-button img,
+  .image-button-download img {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .image-button:hover,
+  .image-button-download:hover {
+    transform: scale(1.1);
+  }
+  
+  .notecard-container {
+    position: relative;
     text-align: center;
-    text-decoration: none;
-    transition: all 0.5s ease-out;
-}
-      
-button:hover,
-button:focus {
-    background-color: #fff;
-    color: #333;
-}
+  }
+  
+  .notecard-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .artist-list {
+    font-family: 'TravelingTypewriter';
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+  }
+  
+  .handwritten-note {
+    font-family: 'Puggos';
+    font-size: 1.6em;
+    line-height: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding: 10px;
+  }
 
-.logout-button {
+  .logout-button {
     position: fixed;
     top: 20px; 
     right: 20px; 
@@ -70,5 +143,44 @@ footer{
     left: 20px;
     font-size: 10px;
     font-family: 'Courier New', Courier;
-    color: gray;
+    color: black;
+}
+
+.envelope-container{
+  position: relative;
+  text-align: center;
+}
+
+.envelope-image{
+  max-width: 50%;
+  height: auto;
+}
+
+.address{
+  font-family: 'TravelingTypewriter';
+  line-height: 1;
+  position: absolute;
+  top: 21%;
+  left: 40%;
+  transform: translate(-50%, -70%);
+  text-align: left;
+}
+
+.login-button{
+  position: absolute;
+  top: 35%;
+  left: 1%;
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.login-button:hover{
+  transform: scale(1.1);
+}
+
+.heart-img {
+  max-width: 13%;
+  z-index: 1; 
 }
