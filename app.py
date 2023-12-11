@@ -8,8 +8,8 @@ import os
 import requests
 
 #DEFINING CONSTS
-CLIENT_ID = " "
-CLIENT_SECRET = " "
+CLIENT_ID = "7335fe8c6a29494394c314526901fc59"
+CLIENT_SECRET = "cc7ed1f76e35410392b62fd6a01d4e73"
 TOKEN_INFO = "token_info"
 SECRET_KEY = "asdf"
 SHORT_TERM = "short_term"
@@ -49,7 +49,6 @@ def login():
     auth_url = sp_oauth.get_authorize_url()
     return redirect(auth_url)
     
-
 @app.route("/redirectPage")
 def redirectPage():
     sp_oauth = create_spotify_oauth()
@@ -108,3 +107,4 @@ def getTracks():
         os.remove(".cache")
     
     return render_template('tracks.html', user_name = current_user_name, short_term_track=short_term_track, medium_term_track=medium_term_track, long_term_track=long_term_track, short_term_artist=short_term_artist, medium_term_artist=medium_term_artist, long_term_artist=long_term_artist)
+

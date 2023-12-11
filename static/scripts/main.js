@@ -3,18 +3,24 @@ function showLastMonthTracks() {
      document.getElementById('lastMonth').style.display = 'block';
      document.getElementById('6months').style.display= 'none';
      document.getElementById('allTime').style.display = 'none';
+
+     document.getElementById('artistILike').innerHTML = "artists i like right now";
  }
 
  function showLastSixMonthsTracks() {
      document.getElementById('lastMonth').style.display = 'none';
      document.getElementById('6months').style.display = 'block';
      document.getElementById('allTime').style.display = 'none';
+
+     document.getElementById('artistILike').innerHTML = "artists from the past 6 months";
  }
 
  function showAllTimeTracks() {
      document.getElementById('lastMonth').style.display = 'none';
      document.getElementById('6months').style.display = 'none';
      document.getElementById('allTime').style.display = 'block';
+
+     document.getElementById('artistILike').innerHTML = "my all time top artists";
  }   
  
  function spotifyLogout() {
@@ -28,12 +34,18 @@ function showLastMonthTracks() {
  }
 
  function downloadAsPNG() {
-    const element = document.getElementById('download');
+    var container = document.getElementById('download');
+    html2canvas(container).then(function (canvas) {
+        var imageData = canvas.toDataURL('image/png');
 
-    html2canvas(element).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'content.png';
-        link.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
-        link.click();
+    
+        var downloadLink = document.createElement('a');
+        downloadLink.href = imageData;
+        downloadLink.download = 'downloaded-image.png';
+
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+
+        document.body.removeChild(downloadLink);
     });
 }
