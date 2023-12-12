@@ -125,7 +125,7 @@ In this example, the syntax {% … %} is a tag used to create a for-loop and {{ 
 used to store a variable.
 
 ## Member Notes
-### Sage James
+#### Sage James
 Sage has a keen eye for User-Interface Design, and used that for the betterment of
 our project as she developed the front-end of our web application. Her main focus was to
 create a visually pleasing, easy to navigate, and overall positive user experience. The
@@ -137,7 +137,7 @@ button which allows users to save the results of their API query as a PDF to be 
 with friends. The button, powered by JavaScript, is the crux of developing recognizable
 and entertaining web applications
 
-### Shane Costello
+#### Shane Costello
 Shane’s focus lay in the backend of development. While implementing the Flask
 framework and Spotify Web API, Shane demonstrated acute attention to detail which
 aided in a seamless integration and easeful troubleshooting. His main struggle was
