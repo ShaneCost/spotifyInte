@@ -12,26 +12,26 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
    * `$ git clone https://github.com/ShaneCost/spotifyInte.git`
 2) Navigate to Project Directory
  - The rest of the work we will be doing, will be done inside this directory:
-   * $ cd spotifyInte
+   * `$ cd spotifyInte`
 3) Create Virtual Environment
 - Use venv, pythons virtual environment:
-   * $ python3 -m venv .venv
+   * `$ python3 -m venv .venv`
 4) Activate Virtual Environment
   - Isolate the project dependencies:
-    * $ . .venv/bin/activate
+    * `$ . .venv/bin/activate`
 5) Install Necessary Packages
   - Using pip, we can install Flask (python framework) and spotipy (open-source python library for working with the Spotify Web-API):
-    * $ pip install Flask
-    * $ pip install spotipy
+    * `$ pip install Flask`
+    * `$ pip install spotipy`
 6) Set up API Access
   - Use Client ID and Client Secret we created via Spotify for Developers
      * Open project in VS Code
-     * Navigate to app.py
+     * Navigate to `app.py`
      * In `#CONSTANTS` section enter:
-        - CLIENT_ID = __REDACTED__
-        - CLIENT_SECRET = __REDACTED__
+        - `CLIENT_ID =` __REDACTED__
+        - `CLIENT_SECRET =` __REDACTED__
   - Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
-     * Go to [Spotify for Developers](https://developer.spotify.com/)
+     * Go to `[Spotify for Developers](https://developer.spotify.com/)`
      * Create account / Login to existing account
      * Navigate to ‘Dashboard’
      * Select ‘Create app’
