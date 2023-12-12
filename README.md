@@ -171,3 +171,12 @@ Spotify API. Collaboratively, we refined our skills in frontend design, backend 
 the delicate art of troubleshooting.
 
 ## Refrences
+[Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/installation/)
+[Spotify Web API Documentation](https://developer.spotify.com/documentation/web-api)
+[spotipy Documentation](https://spotipy.readthedocs.io/en/2.22.1/)
+[Jinja Documentation](https://jinja.palletsprojects.com/en/3.1.x/templates/)
+[venv Documentation](https://docs.python.org/3/library/venv.html)
+[Inspiration (Receiptify)](https://receiptify.herokuapp.com/)
+[YouTube Tutorial](https://www.youtube.com/watch?v=yjGnpIOEum4)
+
+
