@@ -27,7 +27,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
   - Use Client ID and Client Secret we (Group 23) created via Spotify for Developers
      * Open project in VS Code
      * Navigate to app.py
-     * In #CONSTANTS section enter:
+     * In `#CONSTANTS` section enter:
         - CLIENT_ID = __REDACTED__
         - CLIENT_SECRET = __REDACTED__
   - Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
@@ -44,7 +44,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
        - Note: When initially creating a web application using the Spotify API, you are defaulted to Development Mode. In development mode, only 25 pre-registered users can access their account information using your application.
      * Open project in VS Code
      * Navigate to app.py
-     * In #CONSTANTS section enter:
+     * In `#CONSTANTS` section enter:
        - CLIENT_ID = * your unique Client ID *
        - CLIENT_SECRET = * your unique Client Secret *
 7) Run the Application
