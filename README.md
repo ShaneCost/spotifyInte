@@ -116,3 +116,6 @@ template. Here is an example of this syntax inside our `tracks.html` file:
    <p> {{ artist['name'] }} </p>
 {% endfor %}
 ```
+
+In this example, the syntax {% … %} is a tag used to create a for-loop and {{ … }} is
+used to store a variable.
