@@ -165,3 +165,5 @@ woven with significant learning experiences. The project served as a catalyst fo
 technical proficiency, from mastering the Flask framework to navigating the complexities of the
 Spotify API. Collaboratively, we refined our skills in frontend design, backend development, and
 the delicate art of troubleshooting.
+
+### Refrences
