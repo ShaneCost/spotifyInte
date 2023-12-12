@@ -30,29 +30,23 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
      * In #CONSTANTS section enter:
         - CLIENT_ID = __REDACTED__
         - CLIENT_SECRET = __REDACTED__
-  b) Create your own web app in Spotify for Developers to generate your own Client
-  ID and Client Secret
-    i) Go to Spotify for Developers
-    ii) Create account / Login to existing account
-    iii) Navigate to ‘Dashboard’
-    iv) Select ‘Create app’
-    v) Provide app name
-    vi) Enter Redirect URI: http://127.0.0.1:5000/redirectPage
-    vii) Select ‘Web API’
-    viii) Save app
-    ix) Navigate to the app you just created and retrieve your unique Client ID
-    and Client Secret
-    x) Navigate to ‘User Management’, and enter the information for all users
-    you’d like to validate for use of your web app
-      **Note: When initially creating a web application using the
-      Spotify API, you are defaulted to Development Mode. In
-      development mode, only 25 pre-registered users can access their
-      account information using your application.
-    xi) Open project in VS Code
-    xii) Navigate to app.py
-    xiii) In #CONSTANTS section enter:
-      (1) CLIENT_ID = * your unique Client ID *
-      (2) CLIENT_SECRET = * your unique Client Secret *
+  - Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
+     * Go to Spotify for Developers
+     * Create account / Login to existing account
+     * Navigate to ‘Dashboard’
+     * Select ‘Create app’
+     * Provide app name
+     * Enter Redirect URI: http://127.0.0.1:5000/redirectPage
+     *  Select ‘Web API’
+     * Save app
+     *  Navigate to the app you just created and retrieve your unique Client ID and Client Secret
+     * Navigate to ‘User Management’, and enter the information for all users you’d like to validate for use of your web app
+       - Note: When initially creating a web application using the Spotify API, you are defaulted to Development Mode. In development mode, only 25 pre-registered users can access their account information using your application.
+     * Open project in VS Code
+     * Navigate to app.py
+     * In #CONSTANTS section enter:
+       - CLIENT_ID = * your unique Client ID *
+       - CLIENT_SECRET = * your unique Client Secret *
 7) Run the Application
   - Make the application discoverable on local host:
      * $ flask run
