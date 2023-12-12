@@ -54,11 +54,11 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
       (1) CLIENT_ID = * your unique Client ID *
       (2) CLIENT_SECRET = * your unique Client Secret *
 7) Run the Application
-  a) Make the application discoverable on local host:
-  $ flask run
+  - Make the application discoverable on local host:
+   * $ flask run
 8) Open Web Application
-  a) The application is up and ready for use:
-  http://127.0.0.1:5000
+  - The application is up and ready for use:
+  * http://127.0.0.1:5000
 
 
 ## Creative Objectives
