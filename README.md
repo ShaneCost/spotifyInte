@@ -7,7 +7,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
 
 
 1) Download Project Files
- a) Open the command line on your machine (Terminal on Mac or Command Prompt on Windows) and navigate to the location you would like to save your files (i.e. desktop):
+ a. Open the command line on your machine (Terminal on Mac or Command Prompt on Windows) and navigate to the location you would like to save your files (i.e. desktop):
    - $ cd desktop
    - $ git clone https://github.com/ShaneCost/spotifyInte.git
 2) Navigate to Project Directory
