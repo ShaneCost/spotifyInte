@@ -115,8 +115,8 @@ template. Here is an example of this syntax inside our `tracks.html` file:
 
 ```python
 <p> songs i like right now </p>
-{% for song in short_term_track['items'][0]['name'] %}
-   <p> {{ artist['name'] }} </p>
+{% for song in short_term_track['items'] %}
+   <p> {{ song[0]['name'] }} </p>
 {% endfor %}
 ```
 
