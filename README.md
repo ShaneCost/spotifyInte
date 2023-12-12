@@ -35,10 +35,10 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
      * Create account / Login to existing account
      * Navigate to `Dashboard`
      * Select `Create app`
-     * Provide app name
-     * Enter Redirect URI: `http://127.0.0.1:5000/redirectPage`
-     *  Select `Web API`
-     * Save app
+        - Provide app name
+        - Enter Redirect URI: `http://127.0.0.1:5000/redirectPage`
+        - Select `Web API`
+        - Save app
      *  Navigate to the app you just created and retrieve your unique `Client ID` and `Client Secret`
      * Navigate to `User Management`, and enter the information for all users you’d like to validate for use of your web app
        - Note: When initially creating a web application using the Spotify API, you are defaulted to Development Mode. In development mode, only 25 pre-registered users can access their account information using your application.
