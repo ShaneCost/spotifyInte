@@ -82,10 +82,10 @@ We deployed two main technologies while developing our web application: (1) Flas
 
   In brief, these imports serve the following functionalities:
      + a) `request`: allows you to access data from a web API.
-     + b) `url_for`: allows you to make static, relative references to endpoints inside         your Python application while it is being served. This is very powerful when
+     + b) `url_for`: allows you to make static, relative references to endpoints inside your Python application while it is being served. This is very powerful when
      incorporating CSS or JavaScript files.
-     + c) `session`: allows you to store information specific to a user from one request           to the next.
-     + d) `redirect`: rellocates the user to a new endpoint inside your Python     application.
+     + c) `session`: allows you to store information specific to a user from one request to the next.
+     + d) `redirect`: rellocates the user to a new endpoint inside your Python application.
      + e) `render_template`: allows you send data stored in variables from your Python
      code to a specified HTML file.
 
