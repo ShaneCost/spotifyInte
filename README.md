@@ -50,6 +50,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
 7) Run the Application
   - Make the application discoverable on local host:
      * $ flask run
+        - Note: you may have to re-run the command $ . .venv/bin/activate
 8) Open Web Application
   - The application is up and ready for use:
      * http://127.0.0.1:5000
