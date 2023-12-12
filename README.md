@@ -31,7 +31,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
         - CLIENT_ID = __REDACTED__
         - CLIENT_SECRET = __REDACTED__
   - Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
-     * Go to Spotify for Developers
+     * Go to [Spotify for Developers](https://developer.spotify.com/)
      * Create account / Login to existing account
      * Navigate to ‘Dashboard’
      * Select ‘Create app’
