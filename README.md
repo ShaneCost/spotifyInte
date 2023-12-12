@@ -40,7 +40,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
      *  Select `Web API`
      * Save app
      *  Navigate to the app you just created and retrieve your unique `Client ID` and `Client Secret`
-     * Navigate to ‘User Management’, and enter the information for all users you’d like to validate for use of your web app
+     * Navigate to `User Management`, and enter the information for all users you’d like to validate for use of your web app
        - Note: When initially creating a web application using the Spotify API, you are defaulted to Development Mode. In development mode, only 25 pre-registered users can access their account information using your application.
      * Open project in VS Code
      * Navigate to `app.py`
