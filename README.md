@@ -78,7 +78,9 @@ Living in the realm of modern technologies, our stylistic approach was to make t
 We deployed two main technologies while developing our web application: (1) Flask and
 (2) the Spotify Web-API. Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code `from flask import Flask` will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
 
-`from flask import Flask, request, url_for, session, redirect, render_template`
+```plaintext
+from flask import Flask, request, url_for, session, redirect, render_template`
+```
 
 In brief, these imports serve the following functionalities:
 
