@@ -97,6 +97,7 @@ short_term_track = sp.current_user_top_tracks(
     offset=0,
     time_range= ‘short_term’
 )
+\```
 
 In this example, `sp` is a spotipy object we created using the user’s Spotify credentials
 once they have logged into their Spotify account. The method `.current_user_top_tracks` is from the spotipy library which returns the authorized users most listened to songs. We passed the parameters, (1) `limit=1` which tells the API to return only one song from the data (2) `offset=0` which tells the API to begin the request at index zero, where index zero represent their most listened to song and later indices provide a sequential ranking of songs (3) `time_range= ‘short_term’` which tells the API to gather the data based on their last 4-weeks of listening history (as defined by the Spotify Web API). The other options for this parameter are: (a)`‘medium_term’` [last 6-months of listening history] or (b) `‘long_term’` [all-time listening history]. Finally, we stored this data in the variable `short_term_track`, which is later sent to an HTML file; exemplified here:
@@ -114,4 +115,4 @@ template. Here is an example of this syntax inside our `tracks.html` file:
 {% for artist in short_term_artists['items'] %}
    <p> {{ artist['name'] }} </p>
 {% endfor %}
-
+\```
