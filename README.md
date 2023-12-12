@@ -66,8 +66,11 @@ Living in the realm of modern technologies, our stylistic approach was to make t
 
 ## Tech Summary
 
-We deployed two main technologies while developing our web application: (1) Flask and
-(2) the Spotify Web-API. Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code (`from flask import Flask`) will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
+We deployed two main technologies while developing our web application: (1) Flask and (2) the Spotify Web-API. Additionally, we will breifly touch on Jinja. 
+
+#### Flask
+
+Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code (`from flask import Flask`) will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
 
 ```python
 flask import Flask, request, url_for, session, redirect, render_template`
@@ -80,6 +83,8 @@ In brief, these imports serve the following functionalities:
 + `session`: Allows you to store information specific to a user from one request to the next.
 + `redirect`: Relocates the user to a new endpoint inside your Python application.
 + `render_template`: Allows you to send data stored in variables from your Python code to a specified HTML file.
+
+#### Spotify Web-API
 
 The Spotify Web-API is a very well documented and easy to use API. For creating your
 own web application using the Spotify Web-API, look at <ins>Usage Instructions: 6-b</ins>. This API can be used for a multitude of applications. Just to name a few: gathering data specific to an artist or album, creating playlists, or gathering user data. We chose to use the API to gather user data. Similarly when interacting with user data, there are multitudes of approaches: collecting the user's top artists, top tracks, top genres, and the list goes on. We chose to collect the user’s top artist and top tracks. When interacting with the API, certain requests require different parameters. For our requests, we had to specify three things: (1) the number of tracks/artists we wanted returned to us, (2) the offset from zero where we wanted to begin collecting our data, and (3) the time range we wanted the data to cover. We used spotipy, an open source python library, for interacting with the Spotify API, which provided us with some clean and clever syntax. Here is an example of a request to the API using spotipy:
@@ -98,6 +103,8 @@ once they have logged into their Spotify account. The method `.current_user_top_
   ```python
   return render_template(‘tracks.html’, short_term_track= short_term_track)
   ```
+
+##### Jinja 
 
 The final piece of technology to briefly examine is the syntax of integrating Python data
 inside your HTML file. Flask employs the Jinja library for working with templates. A Jinja
