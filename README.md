@@ -58,7 +58,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
      * $ flask run
 8) Open Web Application
   - The application is up and ready for use:
-    * http://127.0.0.1:5000
+     * http://127.0.0.1:5000
 
 
 ## Creative Objectives
