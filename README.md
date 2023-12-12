@@ -47,10 +47,10 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
     and Client Secret
     x) Navigate to ‘User Management’, and enter the information for all users
     you’d like to validate for use of your web app
-    **Note: When initially creating a web application using the
-    Spotify API, you are defaulted to Development Mode. In
-    development mode, only 25 pre-registered users can access their
-    account information using your application.
+      **Note: When initially creating a web application using the
+      Spotify API, you are defaulted to Development Mode. In
+      development mode, only 25 pre-registered users can access their
+      account information using your application.
     xi) Open project in VS Code
     xii) Navigate to app.py
     xiii) In #CONSTANTS section enter:
@@ -76,4 +76,4 @@ Living in the realm of modern technologies, our stylistic approach was to make t
 ### Tech Summary
 
 We deployed two main technologies while developing our web application: (1) Flask and
-(2) the Spotify Web-API. Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code 'from flask import Flask' will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
+(2) the Spotify Web-API. Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code `from flask import Flask` will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
