@@ -124,7 +124,7 @@ In this example, the syntax {% … %} is a tag used to create a for-loop and {{ 
 used to store a variable.
 
 ## Member Notes
-#### Sage James
+#### [Sage James](https://github.com/sagejames1)
 Sage has a keen eye for User-Interface Design, and used that for the betterment of
 our project as she developed the front-end of our web application. Her main focus was to
 create a visually pleasing, easy to navigate, and overall positive user experience. The
