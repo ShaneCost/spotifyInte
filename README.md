@@ -84,7 +84,7 @@ In brief, these imports serve the following functionalities:
 The Spotify Web-API is a very well documented and easy to use API. For creating your
 own web application using the Spotify Web-API, look at <ins>Usage Instructions: 6-b</ins>. This API can be used for a multitude of applications. Just to name a few: gathering data specific to an artist or album, creating playlists, or gathering user data. We chose to use the API to gather user data. Similarly when interacting with user data, there are multitudes of approaches: collecting the user's top artists, top tracks, top genres, and the list goes on. We chose to collect the user’s top artist and top tracks. When interacting with the API, certain requests require different parameters. For our requests, we had to specify three things: (1) the number of tracks/artists we wanted returned to us, (2) the offset from zero where we wanted to begin collecting our data, and (3) the time range we wanted the data to cover. We used spotipy, an open source python library, for interacting with the Spotify API, which provided us with some clean and clever syntax. Here is an example of a request to the API using spotipy:
 
-```plaintext
+```python
 short_term_track = sp.current_user_top_tracks(
     limit=1,
     offset=0,
@@ -95,7 +95,7 @@ short_term_track = sp.current_user_top_tracks(
 In this example, `sp` is a spotipy object we created using the user’s Spotify credentials
 once they have logged into their Spotify account. The method `.current_user_top_tracks` is from the spotipy library which returns the authorized users most listened to songs. We passed the parameters, (1) `limit=1` which tells the API to return only one song from the data (2) `offset=0` which tells the API to begin the request at index zero, where index zero represent their most listened to song and later indices provide a sequential ranking of songs (3) `time_range= ‘short_term’` which tells the API to gather the data based on their last 4-weeks of listening history (as defined by the Spotify Web API). The other options for this parameter are: (a)`‘medium_term’` [last 6-months of listening history] or (b) `‘long_term’` [all-time listening history]. Finally, we stored this data in the variable `short_term_track`, which is later sent to an HTML file; exemplified here:
 
-  ```plaintext
+  ```python
   return render_template(‘tracks.html’, short_term_track= short_term_track)
   ```
 
@@ -105,7 +105,7 @@ template is any form of text file (HTML, CSV, ect.), where variables are held an
 as the template renders. Jinja also includes tags, which are used to control the logic of the
 template. Here is an example of this syntax inside our `tracks.html` file:
 
-```plaintext
+```python
 <p> artists i like right now </p>
 {% for artist in short_term_artists['items'] %}
    <p> {{ artist['name'] }} </p>
