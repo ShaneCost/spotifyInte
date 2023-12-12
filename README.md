@@ -143,3 +143,25 @@ gain a deep understanding of the codebase developed for this application. He lea
 biggest lessons when initially trying to deploy the project on Sage’s machine. During this
 exercise, he was able to identify the dependencies in Flask and attributes of the Spotify
 API that required adjusting when transferring code from one machine to another.
+
+## Conclusion 
+Regrettably, despite our best efforts, we encountered insurmountable challenges in hosting our
+Spotify web application. The intricacies of the Flask framework proved to be particularly
+daunting during the hosting process. Despite meticulous troubleshooting and adaptation, we were
+unable to achieve the seamless online deployment we had envisioned.
+
+Compounding the hosting woes, the unique URI routing of the Spotify API introduced additional
+complexities. Integrating the API smoothly with standard hosting platforms posed formidable
+challenges. The distinctiveness of the API's routing created hurdles that, despite our best efforts,
+prevented us from successfully hosting the site.
+
+This experience has served as a humbling reminder of the unpredictable nature of web
+development and the importance of contingency planning. While hosting eluded us this time, the
+insights gained will undoubtedly inform our approach to future projects, emphasizing the need
+for a thorough understanding of hosting intricacies and proactive problem-solving.
+
+Amidst the hosting challenges encountered with the Spotify Web App, our journey was also
+woven with significant learning experiences. The project served as a catalyst for enhancing our
+technical proficiency, from mastering the Flask framework to navigating the complexities of the
+Spotify API. Collaboratively, we refined our skills in frontend design, backend development, and
+the delicate art of troubleshooting.
