@@ -24,13 +24,13 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
     * $ pip install Flask
     * $ pip install spotipy
 6) Set up API Access
-  a. Use Client ID and Client Secret we created via Spotify for Developers
+  - Use Client ID and Client Secret we created via Spotify for Developers
      * Open project in VS Code
      * Navigate to app.py
      * In `#CONSTANTS` section enter:
         - CLIENT_ID = __REDACTED__
         - CLIENT_SECRET = __REDACTED__
-  b. Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
+  - Create your own web app in Spotify for Developers to generate your own Client ID and Client Secret
      * Go to Spotify for Developers
      * Create account / Login to existing account
      * Navigate to ‘Dashboard’
