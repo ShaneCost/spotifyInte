@@ -81,6 +81,7 @@ We deployed two main technologies while developing our web application: (1) Flas
 `from flask import Flask, request, url_for, session, redirect, render_template`
 
   In brief, these imports serve the following functionalities:
+```
      + a) `request`: allows you to access data from a web API.
      + b) `url_for`: allows you to make static, relative references to endpoints inside your Python application while it is being served. This is very powerful when
      incorporating CSS or JavaScript files.
@@ -88,6 +89,7 @@ We deployed two main technologies while developing our web application: (1) Flas
      + d) `redirect`: rellocates the user to a new endpoint inside your Python application.
      + e) `render_template`: allows you send data stored in variables from your Python
      code to a specified HTML file.
+```
 
 The Spotify Web-API is a very well documented and easy to use API. For creating your
 own web application using the Spotify Web-API, look at Usage Instructions: 6-b. This API can be used for a multitude of applications. Just to name a few: gathering data specific to an artist or album, creating playlists, or gathering user data. We chose to use the API to gather user data. Similarly when interacting with user data, there are multitudes of approaches: collecting the user's top artists, top tracks, top genres, and the list goes on. We chose to collect the user’s top artist and top tracks. When interacting with the API, certain requests require different parameters. For our requests, we had to specify three things: (1) the number of tracks/artists we wanted returned to us, (2) the offset from zero where we wanted to begin collecting our data, and (3) the time range we wanted the data to cover. We used spotipy, an open source python library, for interacting with the Spotify API, which provided us with some clean and clever syntax. Here is an example of a request to the API using spotipy:
