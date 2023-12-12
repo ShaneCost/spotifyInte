@@ -31,8 +31,8 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
     i) Open project in VS Code
     ii) Navigate to app.py
     iii) In #CONSTANTS section enter:
-      (1) CLIENT_ID = 7335fe8c6a29494394c314526901fc59
-      (2) CLIENT_SECRET = cc7ed1f76e35410392b62fd6a01d4e73
+      (1) CLIENT_ID = __REDACTED__
+      (2) CLIENT_SECRET = __REDACTED__
   b) Create your own web app in Spotify for Developers to generate your own Client
   ID and Client Secret
     i) Go to Spotify for Developers
@@ -63,3 +63,12 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
   a) The application is up and ready for use:
   http://127.0.0.1:5000
 ```
+
+### Creative Objectives
+
+Our project aims to deliver a distinct use experience within the realm of Spotify
+web-applications. There is an abundance of popular web-applications using the Spotify
+Web-API, namely ‘Receiptify’, which we drew inspiration from. We set out to overcome the
+challenge of integrating the Spotify API seamlessly into a Flask-based web application, allowing users to interact with their Spotify accounts in a unique and engaging way. The mission is to provide a platform that stands out from existing solutions and offers added value to users.
+
+Living in the realm of modern technologies, our stylistic approach was to make the user feel as though they are taking a momentary step back. Our web application incorporates themes of vintage mail, handwritten letters, and textured stickers to give the feeling of a real, tangible object our user can view and share with others. This aesthetic allows for a pleasant and easy to use user interface, which was a priority of ours during development.
