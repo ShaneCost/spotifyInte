@@ -3,7 +3,7 @@
  **Feature(s):**
 Our project is a web app that integrates the Spotify API using the Flask framework. The goal is to provide a unique user experience, similar to other popular Spotify web apps like Receiptify and Iceburgify.
 
-### Installation and Setup
+## Installation and Setup
 
 ```
 1) Download Project Files
@@ -64,7 +64,7 @@ Our project is a web app that integrates the Spotify API using the Flask framewo
   http://127.0.0.1:5000
 ```
 
-### Creative Objectives
+## Creative Objectives
 
 Our project aims to deliver a distinct use experience within the realm of Spotify
 web-applications. There is an abundance of popular web-applications using the Spotify
@@ -73,7 +73,7 @@ challenge of integrating the Spotify API seamlessly into a Flask-based web appli
 
 Living in the realm of modern technologies, our stylistic approach was to make the user feel as though they are taking a momentary step back. Our web application incorporates themes of vintage mail, handwritten letters, and textured stickers to give the feeling of a real, tangible object our user can view and share with others. This aesthetic allows for a pleasant and easy to use user interface, which was a priority of ours during development.
 
-### Tech Summary
+## Tech Summary
 
 We deployed two main technologies while developing our web application: (1) Flask and
 (2) the Spotify Web-API. Flask is an open source python framework for web applications. It is often referred to as a microframework. The original developer, Armin Ronacher, designed it to keep the core of the application simple, yet scalable. This means simply importing Flask to your python code `from flask import Flask` will offer very limited functionality. To make the most of the Flask framework, you have to choose your own additional imports. From the Flask documentation, “Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities to the application”. While this ideology may increase the learning curve when developing with Flask, once you have gained familiarity with the technology, it is actually very powerful to be in control of all your own imports. We used the following extensions when developing our application:
@@ -119,3 +119,27 @@ template. Here is an example of this syntax inside our `tracks.html` file:
 
 In this example, the syntax {% … %} is a tag used to create a for-loop and {{ … }} is
 used to store a variable.
+
+## Member Notes
+### Sage James
+Sage has a keen eye for User-Interface Design, and used that for the betterment of
+our project as she developed the front-end of our web application. Her main focus was to
+create a visually pleasing, easy to navigate, and overall positive user experience. The
+styling followed a hand-written, scrapbook aesthetic. The approach used is unique, and
+distinctly recognizable from similar applications on the market. She used technologies
+such as CSS, GoogleFonts, and Canva to achieve this goal. She added special features to
+enhance user experience passed basic functionality. Namely, she created a download
+button which allows users to save the results of their API query as a PDF to be shared
+with friends. The button, powered by JavaScript, is the crux of developing recognizable
+and entertaining web applications
+
+### Shane Costello
+Shane’s focus lay in the backend of development. While implementing the Flask
+framework and Spotify Web API, Shane demonstrated acute attention to detail which
+aided in a seamless integration and easeful troubleshooting. His main struggle was
+resolved to a lack of familiarity with the technologies used. Aided by a very informative
+YouTube tutorial and with an abundance of patience, he was able to problem solve and
+gain a deep understanding of the codebase developed for this application. He learned his
+biggest lessons when initially trying to deploy the project on Sage’s machine. During this
+exercise, he was able to identify the dependencies in Flask and attributes of the Spotify
+API that required adjusting when transferring code from one machine to another.
