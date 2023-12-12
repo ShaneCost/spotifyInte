@@ -114,8 +114,8 @@ as the template renders. Jinja also includes tags, which are used to control the
 template. Here is an example of this syntax inside our `tracks.html` file:
 
 ```python
-<p> artists i like right now </p>
-{% for artist in short_term_artists['items'] %}
+<p> songs i like right now </p>
+{% for song in short_term_track['items'][0]['name'] %}
    <p> {{ artist['name'] }} </p>
 {% endfor %}
 ```
